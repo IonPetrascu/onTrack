@@ -11,4 +11,3 @@ export default {
     >
   </li>
 </template>
-<style scoped></style>
