@@ -11,6 +11,8 @@ import TheProgress from './pages/TheProgress.vue'
 const currentPage = ref(normalizePageHash())
 const timelineItems = generateTimelineItem()
 
+const activities = ['Coding', 'Reading', 'Training']
+
 function goTo(page) {
   currentPage.value = page
 }
@@ -23,7 +25,7 @@ function goTo(page) {
       <TheTimeline :timeline-items="timelineItems" />
     </div>
     <div v-show="currentPage === PAGE_ACTIVITIES">
-      <TheActivities />
+      <TheActivities :activities="activities" />
     </div>
     <div v-show="currentPage === PAGE_PROGRESS">
       <TheProgress />

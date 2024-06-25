@@ -51,3 +51,14 @@ function isString(value) {
 function isBetween(value, start, end) {
   return value >= start && value <= end
 }
+
+function isNotEmptyString(value) {
+  return isString(value) && value.length > 0
+}
+
+function isActivityValid(activity) {
+  return isNotEmptyString(activity)
+}
+export function validateActivities(activities) {
+  return activities.every(isActivityValid)
+}
